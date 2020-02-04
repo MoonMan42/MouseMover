@@ -37,17 +37,8 @@ namespace MoveMouse_WPF_Core
             if (isRunning)
             {
                 timer.Start();
+                timeLabel.Content = DateTime.Now.AddMinutes(5).ToString("h:mm tt");
             }
-        }
-
-        private void StartAction(object sender, EventArgs e)
-        {
-            timer.Start();
-        }
-
-        private void StopAction(object sender, EventArgs e)
-        {
-            timer.Stop();
         }
 
         private void Running_Click(object sender, EventArgs e)
@@ -63,6 +54,7 @@ namespace MoveMouse_WPF_Core
             {
                 isRunning = !isRunning;
                 RunningBtn.Content = "Pause";
+
             }
         }
 
@@ -78,22 +70,22 @@ namespace MoveMouse_WPF_Core
                 y = p.y;
             }
 
-            // move the mouse passed on windows position.  
-            //var xL = (int)App.Current.MainWindow.Left; // left boundry
-            //var xR = (int)App.Current.MainWindow.Width; // right boundry
-            //var yT = (int)App.Current.MainWindow.Top; // top boundry
-            //var yB = (int)App.Current.MainWindow.Height; // bottom boundry
-
             
             // move position. 
             SetCursorPos(x + 20, y + 20);
-            
+
             //SetCursorPos(x - 20, y - 20);
 
             // set random time
+            GenTime();
+        }
+
+        // randomly generate time and display to board. 
+        private void GenTime()
+        {
             Random gen = new Random();
             minTime = gen.Next(4, 8); //between 4 and 7 minutes. 
-            //timeLabel.Content = DateTime.Now.AddMinutes(minTime);
+            timeLabel.Content = DateTime.Now.AddMinutes(minTime).ToString("h:mm tt");
         }
     }
 }
