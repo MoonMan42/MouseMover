@@ -24,13 +24,20 @@ namespace MoveMouse_WPF_Core
         DispatcherTimer timer = new DispatcherTimer();
 
 
-        private int minTime = 5; 
+        private int minTime = 5;
+
+        private bool isRunning = true;
 
         public MainWindow()
         {
             InitializeComponent();
             timer.Tick += new EventHandler(TickEvent);
             timer.Interval = new TimeSpan(0, minTime, 0); // hours, min, sec
+
+            if (isRunning)
+            {
+                timer.Start();
+            }
         }
 
         private void StartAction(object sender, EventArgs e)
@@ -41,6 +48,22 @@ namespace MoveMouse_WPF_Core
         private void StopAction(object sender, EventArgs e)
         {
             timer.Stop();
+        }
+
+        private void Running_Click(object sender, EventArgs e)
+        {
+            // stop timer
+            if (isRunning)
+            {
+                timer.Stop();
+                RunningBtn.Content = "Resume";
+                isRunning = !isRunning;
+            }
+            else
+            {
+                isRunning = !isRunning;
+                RunningBtn.Content = "Pause";
+            }
         }
 
         private void TickEvent(object sender, EventArgs e)
@@ -65,12 +88,12 @@ namespace MoveMouse_WPF_Core
             // move position. 
             SetCursorPos(x + 20, y + 20);
             
-            SetCursorPos(x - 20, y - 20);
+            //SetCursorPos(x - 20, y - 20);
 
             // set random time
             Random gen = new Random();
             minTime = gen.Next(4, 8); //between 4 and 7 minutes. 
-            timeLabel.Content = DateTime.Now.AddMinutes(minTime);
+            //timeLabel.Content = DateTime.Now.AddMinutes(minTime);
         }
     }
 }

@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\45136\\.nuget\\packages\\": {},
+    "C:\\Users\\the13\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Documents\\VS\\MoveMouse\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
+      "projectUniqueName": "C:\\Users\\the13\\Desktop\\Workspace\\C#\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
       "projectName": "MoveMouse_WPF_Core",
-      "projectPath": "I:\\Documents\\VS\\MoveMouse\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
-      "packagesPath": "C:\\Users\\45136\\.nuget\\packages\\",
-      "outputPath": "I:\\Documents\\VS\\MoveMouse\\MoveMouse_WPF_Core\\obj\\",
+      "projectPath": "C:\\Users\\the13\\Desktop\\Workspace\\C#\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
+      "packagesPath": "C:\\Users\\the13\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\the13\\Desktop\\Workspace\\C#\\MouseMover\\MoveMouse_WPF_Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\45136\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\the13\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
