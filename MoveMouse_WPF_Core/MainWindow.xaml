@@ -4,11 +4,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MoveMouse_WPF_Core"
-        mc:Ignorable="d" FontSize="20"
-        Title="MouseMove" Height="150" Width="199">
-    <Grid>
-        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Pause" x:Name="RunningBtn" Click="Running_Click" Padding="5" Margin="65,10,0,0"/>
-        <!--<Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Stop" x:Name="StopBtn" Click="StopAction" Padding="5" Margin="10,60,0,0"/>-->
-        <Label Content="Next Time" HorizontalAlignment="Center" Margin="0,54,0,0" VerticalAlignment="Top" x:Name="timeLabel"/>
+        mc:Ignorable="d" FontSize="15"
+        Title="MouseMove" Height="150" Width="200">
+    <Grid Margin="5">
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Start" x:Name="StartBtn" Click="StartBtn_Click" Padding="5" Margin="10,10,0,0"/>
+        <Button HorizontalAlignment="Left" VerticalAlignment="Top" Content="Stop" x:Name="StopBtn" Click="StopBtn_Click" Padding="5" Margin="10,67,0,0"/>
+        <Label Content="Next Time" HorizontalAlignment="Left" Margin="79,0,0,0" VerticalAlignment="Center" x:Name="timeLabel"/>
     </Grid>
 </Window>

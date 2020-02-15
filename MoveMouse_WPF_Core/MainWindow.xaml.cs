@@ -26,36 +26,24 @@ namespace MoveMouse_WPF_Core
 
         private int minTime = 5;
 
-        private bool isRunning = true;
-
         public MainWindow()
         {
             InitializeComponent();
             timer.Tick += new EventHandler(TickEvent);
             timer.Interval = new TimeSpan(0, minTime, 0); // hours, min, sec
+            
 
-            if (isRunning)
-            {
-                timer.Start();
-                timeLabel.Content = DateTime.Now.AddMinutes(5).ToString("h:mm tt");
-            }
         }
 
-        private void Running_Click(object sender, EventArgs e)
+        private void StartBtn_Click(object sender, EventArgs e)
         {
-            // stop timer
-            if (isRunning)
-            {
-                timer.Stop();
-                RunningBtn.Content = "Resume";
-                isRunning = !isRunning;
-            }
-            else
-            {
-                isRunning = !isRunning;
-                RunningBtn.Content = "Pause";
+            timer.Start();
+            timeLabel.Content = DateTime.Now.AddMinutes(5).ToString("h:mm tt");
+        }
 
-            }
+        private void StopBtn_Click(object sender, EventArgs e)
+        {
+            timer.Stop();
         }
 
         private void TickEvent(object sender, EventArgs e)
@@ -70,11 +58,10 @@ namespace MoveMouse_WPF_Core
                 y = p.y;
             }
 
-            
-            // move position. 
-            SetCursorPos(x + 20, y + 20);
 
-            //SetCursorPos(x - 20, y - 20);
+            // move position. 
+            SetCursorPos(x + GenPos(), y + GenPos());
+            SetCursorPos(x + GenPos(), y + GenPos());
 
             // set random time
             GenTime();
@@ -84,8 +71,14 @@ namespace MoveMouse_WPF_Core
         private void GenTime()
         {
             Random gen = new Random();
-            minTime = gen.Next(4, 8); //between 4 and 7 minutes. 
+            minTime = gen.Next(4, 7); //between 4 and 7 minutes. 
             timeLabel.Content = DateTime.Now.AddMinutes(minTime).ToString("h:mm tt");
+        }
+
+        private int GenPos()
+        {
+            Random gen = new Random();
+            return gen.Next(50, 200);
         }
     }
 }

@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "I:\\Documents\\VS\\AutoClicker\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
+      "projectUniqueName": "I:\\Documents\\VS\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
       "projectName": "MoveMouse_WPF_Core",
-      "projectPath": "I:\\Documents\\VS\\AutoClicker\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
+      "projectPath": "I:\\Documents\\VS\\MouseMover\\MoveMouse_WPF_Core\\MoveMouse_WPF_Core.csproj",
       "packagesPath": "C:\\Users\\45136\\.nuget\\packages\\",
-      "outputPath": "I:\\Documents\\VS\\AutoClicker\\MouseMover\\MoveMouse_WPF_Core\\obj\\",
+      "outputPath": "I:\\Documents\\VS\\MouseMover\\MoveMouse_WPF_Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
